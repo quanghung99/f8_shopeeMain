@@ -1700,8 +1700,8 @@
 .policy__infomation a {
     text-decoration: none;
     text-transform: uppercase;
-    border-left: 1px solid #b9b9b9;
-    color: #b9b9b9 ;
+    border-left: 1px solid #8c8c8c;
+    color: #8c8c8c ;
     margin-right: 16px;
     padding-left: 16px;
     font-size: 1.4rem;
@@ -1719,7 +1719,7 @@
 .policy__name-company{
     font-size: 1.4rem;
     font-weight: 300;
-    color: #b7b7b7;
+    color: #8c8c8c;
     margin-bottom: 24px;
 }
 
@@ -1728,7 +1728,7 @@
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 2.2rem;
-    color: #b7b7b7;
+    color: #8c8c8c;
 }
 
 
