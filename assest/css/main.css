@@ -198,7 +198,6 @@
     top: var(--top_position_QRcode_Notify);
     right: 0;
     background-color: var(--white-color);
-    /* border: 0.5px solid #d4cece; */
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     display: none;
     transform-origin:  calc(100% - 30px) top;
@@ -237,10 +236,10 @@
 }
 
 .navbar-notify__header h3{
-    color: #d4cece;
+    color: #b9b9b9;
     padding: 0 0 0 12px;
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.4rem;
 }
 
@@ -291,12 +290,19 @@
     color: #7f7f7f;
     display: block;
     font-size: 1.4rem;
+    line-height: 1.8rem;
+    height: 18px;
+    max-height: 36px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 .navbar-notify__footer{
     padding: 16px;
     color: var(--text-color);
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .navbar-notify__footer-link{
@@ -873,7 +879,7 @@
 
 .cart__content-item-name{
     margin-left: 12px;
-    flex: 2;
+    flex: 3;
 }
 
 .cart__content-item-name-fullname{
@@ -898,7 +904,6 @@
 }
 
 .cart__content-item-description-price{
-    margin-right: 8px;
     color: var(--current-color);
 }
 
@@ -917,7 +922,7 @@
 }
 
 .cart__content-item-description-number{
-
+    font-size: 1.2rem;
 }
 
 
@@ -947,7 +952,7 @@
 }
 .cart__footer-button-link{
     text-decoration:none;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.6rem;
     color:var(--white-color);
 }
@@ -970,9 +975,10 @@
 }
 
 .filtericon{
-    fill: var(--black-color);
+    fill: none;
+    stroke:  var(--black-color);
     height: 18px;
-    margin-right: 8px;
+    margin: 14px 8px 0 0;
 }
 
 .content-list{
@@ -1048,7 +1054,9 @@
     background-clip: content-box;
     position: relative;
     top: 0;
-    transition: top linear 0.05s;
+    transition: top ease 0.05s;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .container-shop:hover { 
@@ -1086,27 +1094,34 @@
 
 .info-fame{
     font-weight: 300;
-    font-size: 1.2rem;
-    color: rgba(65, 65, 65, 0.5);
+    font-size: 1.4rem;
+    color: #a6a6a6;
     margin: 4px 0 8px 0;
     display: flex;
 }
 
 .info-fame__admiration{
     margin-left: 6px;
+    position: relative;
+}
+
+.info-fame__admiration::before{ 
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -7px;
+    height: 70%;
+    width: 1px;
+    background-color: #aaaaaa;
 }
 
 .info-fame__follower{
-    padding-right: 6px;
+    padding-right: 7px;
 }
 
 .info-fame__follower span,.info-fame__admiration span{
     color: rgb(255, 28, 28);
     font-weight: 400;
-}
-
-.info-fame__follower{
-    border-right: 1px solid rgba(65, 65, 65, 0.5);
 }
 
 .container-shop__review{
@@ -1513,7 +1528,207 @@
     text-align: center;
     color: var(--white-color);
     font-size: 1.3rem;
+}
 
+.pagination__list{
+    margin: 40px 0 60px 0;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.pagination__list-item{
+    list-style-type: none;
+    padding: 8px 14px;
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    margin-right: 30px;
+    border-radius: 2px;
+}
+
+.pagination__list-item a{
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+.pagination__list-item.pagination__list-item--active{
+    background-color: var(--current-color);
+}
+
+.pagination__list-item--active a{
+    color: var(--white-color);
+}
+
+.footer{
+    display: flex;
+    position: relative;
+    padding-top: 120px;
+    background-clip: content-box;
+    background-color: #fbfbfb;
+}
+.footer::before{
+    position: absolute;
+    top: 0;
+    content:"";
+    height:6px;
+    width: 100%;
+    background-color: var(--current-color);
+}
+
+.footer-container{
+    position: relative;
+    padding: 32px 0;
+}
+
+.footer-container::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #e3e3e3;
+}
+
+.footer-container::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #e3e3e3;
+}
+
+.footer__item-content{
+    padding: 0;
+}
+
+.footer__item-heading{
+    margin-bottom: 20px;
+    color:#878787;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.8rem;
+}
+
+.footer__item-content-list{
+    list-style-type: none;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.footer__item-content-list a{
+    text-decoration: none;
+    color: #878787;
+}
+
+.footer__item-content-list a:hover{
+    color: var(--current-color);
+}
+
+.footer__item-content-list i{
+    margin-right: 6px;
+    font-size: 1.4rem;
+}
+
+.footer__item-download{
+    display: flex;
+}
+
+.footer__item-download-qrcode{
+    width:86px;
+}
+
+.footer__item-download-apps{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer__item-download-googleplay{
+    height: 20px;
+}
+
+.footer__item-download-appstore{
+    height: 20px;
+}
+
+.all-rights-reversed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #9f9f9f;
+    flex: 1;
+    margin-top: 32px;
+}
+
+.all-rights-reversed__area{
+    margin-left: auto;
+    display: flex;
+}
+
+.all-rights-reversed__area-name{
+    border-right: 1px solid #9f9f9f;
+}
+
+.all-rights-reversed__area-name a{
+    text-decoration: none;
+    padding-right: 4px;
+    margin-left: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #9f9f9f;
+}
+
+.all-rights-reversed__area-name:first-child ,.all-rights-reversed__area-name:last-child{
+    border: none;
+}
+
+.footer-policy{
+    padding: 32px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.policy__infomation a {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-left: 1px solid #b9b9b9;
+    color: #b9b9b9 ;
+    margin-right: 16px;
+    padding-left: 16px;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.policy__infomation-link:first-child {
+    border: none;
+}
+
+.policy__img{
+    height: 32px;
+}
+
+.policy__name-company{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #b7b7b7;
+    margin-bottom: 24px;
+}
+
+.policy__info-company span{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    color: #b7b7b7;
 }
 
 
