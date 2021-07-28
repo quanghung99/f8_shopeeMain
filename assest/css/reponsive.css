@@ -26,6 +26,9 @@
     .search__item{
         margin-left: 0;
     }
+    .search__item-inputbox{
+        padding: 8px 0 8px 24px;
+    }
     .cart{
         position: fixed;
         top: var(--header-height);
