@@ -1200,14 +1200,14 @@
     background-color: var(--white-color);
     background-clip: content-box;
     position: relative;
-    top: 0;
-    transition: top ease 0.05s;
+    will-change: transform;
+    transition: transform ease 0.05s;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .container-shop:hover { 
-    top: -1px;
+    transform: translateY(-2px);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
