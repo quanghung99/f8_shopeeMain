@@ -1502,15 +1502,14 @@
     display: block;
     text-decoration: none;
     position: relative;
-    top: 0;
-    will-change: transition;
-    transition: top linear 0.05s;
+    will-change: transform;
+    transition: transform linear 0.1s;
     border-bottom-left-radius: 2px ;
     border-bottom-right-radius: 2px ;
 }
 
 .container-product__item:hover{
-    top: -1px;
+    transform: translateY(-2px);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
