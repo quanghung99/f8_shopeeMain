@@ -1201,7 +1201,7 @@
     background-clip: content-box;
     position: relative;
     will-change: transform;
-    transition: transform ease 0.05s;
+    transition: transform ease 0.1s;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
